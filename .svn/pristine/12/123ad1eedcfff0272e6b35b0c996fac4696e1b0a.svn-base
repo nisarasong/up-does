@@ -1,0 +1,59 @@
+   <div id="box-download" style="padding:10px; text-align:left; margin-bottom:0px">
+                                 <ul style="list-style: none;padding-left: 10px">
+                                    <li><span class="ui-icon ui-icon-circle-triangle-e text_big2" style="float: left; margin-right: .3em;"></span><font style="font-size: 18px">วีดีโอแนะนำการเพิ่มรายวิชา </font></li>                               
+                                </ul>
+                                   <video width="640" height="400" controls>
+                                    <source src="http://www.does.up.ac.th/vdo/03-1_Add_subject.mp4" type="video/mp4">
+                                    <object data="http://www.does.up.ac.th/vdo/03-1_Add_subject.mp4" width="640" height="400">
+                                        <embed width="640" height="400" src="http://www.does.up.ac.th/vdo/03-1_Add_subject.mp4">
+                                    </object>
+                                </video>
+                            </div>
+                            <div id="box-download" style="padding:10px; text-align:left; margin-bottom:0px">
+                                <ul style="list-style: none;padding-left: 10px">
+                                    <li><span class="ui-icon ui-icon-circle-triangle-e " style="float: left; margin-right: .3em;"></span><font style="font-size: 18px">วีดีโอแนะนำการลงทะเบียนเรียน </font></li>                               
+                                </ul>
+                                <video width="640" height="400" controls>
+                                    <source src="http://www.does.up.ac.th/vdo/03_Register.mp4" type="video/mp4">
+                                    <object data="http://www.does.up.ac.th/vdo/03_Register.mp4" width="640" height="400">
+                                        <embed width="640" height="400" src="http://www.does.up.ac.th/vdo/03_Register.mp4">
+                                    </object>
+                                </video>
+                            </div>
+                         
+
+                            <div id="box-download" style="padding:10px; text-align:left; margin-bottom:0px">
+                                 <ul style="list-style: none;padding-left: 10px">
+                                    <li><span class="ui-icon ui-icon-circle-triangle-e" style="float: left; margin-right: .3em;"></span><font style="font-size: 18px">วีดีโอแนะนำการพิมพ์ใบ Pay-in</font> </li>                               
+                                </ul>
+                                <video width="640" height="400" controls>
+                                    <source src="http://www.does.up.ac.th/vdo/04_print_payin.mp4" type="video/mp4">
+                                    <object data="http://www.does.up.ac.th/vdo/04_print_payin.mp4" width="640" height="400">
+                                        <embed width="640" height="400" src="http://www.does.up.ac.th/vdo/04_print_payin.mp4">
+                                    </object>
+                                </video>
+                            </div>
+
+                            <div id="box-download" style="padding:10px; text-align:left; margin-bottom:0px">
+                                 <ul style="list-style: none;padding-left: 10px">
+                                    <li><span class="ui-icon ui-icon-circle-triangle-e" style="float: left; margin-right: .3em;"></span><font style="font-size: 18px">วีดีโอแนะนำการตรวจสอบตารางเรียน - ตารางสอบ </font></li>                               
+                                </ul>
+                                <video width="640" height="400" controls>
+                                    <source src="http://www.does.up.ac.th/vdo/05_check_timetable.mp4" type="video/mp4">
+                                    <object data="http://www.does.up.ac.th/vdo/05_check_timetable.mp4" width="640" height="400">
+                                        <embed width="640" height="400" src="http://www.does.up.ac.th/vdo/05_check_timetable.mp4">
+                                    </object>
+                                </video>
+                            </div>
+
+                            <div id="box-download" style="padding:10px; text-align:left; margin-bottom:0px">
+                                 <ul style="list-style: none;padding-left: 10px">
+                                    <li><span class="ui-icon ui-icon-circle-triangle-e" style="float: left; margin-right: .3em;"></span><font style="font-size: 18px">วีดีโอแนะนำการตรวจสอบรายวิชาที่เปิดสอน </font></li>                               
+                                </ul>
+                                <video width="640" height="400" controls>
+                                    <source src="http://www.does.up.ac.th/vdo/07_check_subject.mp4" type="video/mp4">
+                                    <object data="http://www.does.up.ac.th/vdo/07_check_subject.mp4" width="640" height="400">
+                                        <embed width="640" height="400" src="http://www.does.up.ac.th/vdo/07_check_subject.mp4">
+                                    </object>
+                                </video>
+                            </div>

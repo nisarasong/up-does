@@ -1,0 +1,208 @@
+<!doctype html>
+<?php
+/* หน้าบัณฑิต ขอเว็บ กบศ. */
+/* ------อินคลูดไฟล์จาก class frontend&backend มาใช้-------  */
+/* 
+    header: เรียก style และ javascript
+    menu: เรียก navbar และ footer
+    media: gallery
+    custom: ปรับแต่งเพิ่มเติม
+    blog: เรียกบล็อก section ต่างๆ
+    core: เรียก ปรับแต่งต่างๆ เช่นแปลงวันที่
+*/
+include_once(app_path() . '/frontend/header.php');
+include_once(app_path() . '/frontend/menu.php');
+include_once(app_path() . '/frontend/media.php');
+include_once(app_path() . '/frontend/custom.php');
+include_once(app_path() . '/frontend/blog.php');
+include_once(app_path() . '/core_function/core.php');
+
+/* NEW Instance class for use */
+$header = new header();
+$menu = new menu();
+$media = new media();
+$custom = new custom();
+$blog = new blog();
+$db = new databaseGet();
+/* ----------------------------------------------  */
+?>
+
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <?php
+        $header->getHead("");
+        $header->getCss();
+        $custom->getCustom('custom_index');
+        ?>
+    </head>
+    <body>
+        <?php $menu->navbar("black"); ?>
+    
+        <?php /* Style สำหรับปรับแต่ง เลขหน้า(1,2,3,...)ในการ Query ข้อมูล */ ?>
+        <style>
+            .pagination {
+                padding: 30px 0;
+            }
+    
+            .pagination ul {
+                padding: 0;
+                background-color: white;
+                list-style-type: none;
+                margin: auto;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+    
+            .pagination li {
+                display: inline-block;
+                padding: 10px 18px;
+                color: #222;
+            }
+    
+            .pagination li.active {
+                display: inline-block;
+                padding: 10px 18px;
+                background-color: #42bcf4;
+                color: white;
+            }
+    
+            .pagination li.hover {
+                background-color: #b1e3f9;
+            }
+        </style>
+    
+    
+        <?php $blog->blogOnC("tabs2 cid-qHJ9gv4gsu", "tabs2-r", "0", "0,0,0"); ?>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <?php
+                            $news = DB::table('news_cat')->where('type_news_cat',3)->orderby('order','asc')->orderby('last_date','DESC')->get();
+                            $num = $news[0]->id;
+                            if(isset($_GET['tid'])){
+                                $num = $_GET['tid'];
+                            }
+                            ?>
+                            <?php
+    
+                         foreach($news as $new)
+                         {
+                                tabsPanels($new->name_th,$new->id,$num);
+    
+                       }
+                      tabsPanels(__("u"), "http://www.reg.up.ac.th",$num);
+                          ?>
+    
+    
+    
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <div class="tab-content">
+    
+                        <?php
+    
+                            $blog->tabsPaneOn("tab1", "in active");
+    
+                                $news1 = DB::table('news')->where('cat', $num)->orderBy('orders', 'asc')->orderBy('last_date_new', 'DESC')->paginate(10);
+    
+                                ?>
+                            <div class="container-fluid" style="text-align:left!important; border-radius: 20px; box-shadow:0 3px 36px 0 rgba(0, 0, 0, 0.6); background-color:white; 	border: 5px solid #ffffff;">
+                                <br>
+                                <div class="row">
+                                    <?php
+                                foreach ($news1 as $newsOut) {
+    
+                                    $link = "";
+                                    if($newsOut->type == "file"){
+                                      if($newsOut->nid >= 1093 ){
+                                        $link = url('/public/upload/').'/'.$newsOut->file;
+                                      }else{
+                                              $link = 'http://www.does.up.ac.th/upload/'.$newsOut->file;
+                                      }
+                                    } else if($newsOut->type == "url"){
+                                        $link = $newsOut->url;
+                                    }else if($newsOut->type == "text"){
+                                      $link = '<a  class="display-7"  data-toggle="modal" data-target="#'.$newsOut->nid .'" style="text-align:left!important; font-size:16px;">'.$newsOut->title_th.'<br><span style="text-align:left!important; font-size:12px; color:#D3D3D3; ">'.$db->convertDate($newsOut->create_date_new).'</span></a>';
+                                      echo'
+                                    <!-- Modal -->
+                                    <div id="'.$newsOut->nid .'" class="modal fade" role="dialog">
+                                      <div class="modal-dialog">
+    
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h4 class="modal-title text-center">ข่าว</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            '.$newsOut->title_th.'
+                                            <hr>
+                                            '.$newsOut->text_th.'
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                          </div>
+                                        </div>
+    
+                                      </div>
+                                    </div>';
+                                  } else{$link = "#";}
+                                  if($newsOut->img !=""){ $imgh= url("public/uploadimg").'/'.$newsOut->img;}
+                                    else{ $imgh= "./assets/images/Picture2.png";}
+                                   echo '<div class="col-sm-1">
+                                   <img src="'.$imgh.'" style="height:60px; width:65px;" alt=""></div>';
+                                   if($newsOut->type == "text"){echo '<div class="col-sm-11">'.$link.'</div>';}
+                                   else{echo '<div class="col-sm-11"><a target="_blank" href="'.$link.'" class="display-7" style="text-align:left!important; font-size:16px;">'.$newsOut->title_th.'<br><span style="text-align:left!important; font-size:12px; color:#D3D3D3; ">'.$db->convertDate($newsOut->create_date_new).'</span></a></div>';
+                                   }
+                                   echo '<div class="col-sm-12"><hr></div>';
+    
+    
+                                }
+    
+                                ?> </div>
+                                <div class="pagination center-block">{!! str_replace('/?', '?',$news1->render()) !!}</div>
+                            </div>
+                            <?php
+    
+                            $blog->tabsPaneOff();
+                            ?>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php $blog->blogOffC(); ?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <?php /* เมื่อเลื่อนหน้าแล้วให้ไอดีส่งตามไปด้วย */ ?>
+        <script>
+            $('div.pagination ul.pagination li').each(function(){
+            var link =  $(this).find('a') ;
+            link.attr("href", link.attr('href')+"&tid="+<?php echo $num;  ?>)});
+        </script>
+
+        <?php
+        $menu->footer();
+        $header->getScript();
+        ?>
+    </body>
+    
+    </html>
+    
+    <?php
+     /* ----------ฟังก์ชันแท็บเมนู------------- */ 
+    function tabsPanels($h1, $tabid,$num) {
+        $active = '';
+    if($num == 0){
+      echo '<li class="" ><a class="nav-link mbr-fonts-style display-7" style=""  href="'.$tabid.'" >
+          ' . $h1 . '</a></li>';
+    }
+     else {if($tabid == $num){$active = "active";}
+        echo '<li class="" ><a class="nav-link mbr-fonts-style display-7 '.$active.'" style=""  href="'.url('graduate').'?tid='.$tabid.'" >
+        ' . $h1 . '</a></li>';}
+    }
+    ?>

@@ -1,0 +1,45 @@
+# geniemusic started ================>
+2018-01-29 18:49:51 OS : 10.0, APP : 0.9.1.4
+2018-01-29 18:49:52 upgrade temp removed
+2018-01-29 18:51:57 URL=[https://www.genie.co.kr/myMusic/jGetMyAlbum.json], responce=[]
+2018-01-29 18:52:08 URL=[https://www.genie.co.kr/myMusic/jGetMyAlbum.json], responce=[]
+2018-01-29 18:52:11 URL=[https://www.genie.co.kr/myMusic/jGetMyAlbum.json], responce=[]
+2018-01-29 18:52:13 URL=[https://www.genie.co.kr/myMusic/jGetMyAlbum.json], responce=[]
+2018-01-29 18:52:15 LocalPlayer::SetDevice Device List====
+# device = 1, Speakers (Realtek High Definition Audio)
+# device = 1 seleted default
+# ====
+2018-01-29 18:52:16 LocalPlayer::SetDevice Init device 1 initialized
+2018-01-29 18:52:24 LocalPlayer::Start ChannelPlay success
+# geniemusic started ================>
+2018-01-29 18:52:50 OS : 10.0, APP : 0.9.1.4
+2018-01-29 18:52:51 upgrade temp removed
+2018-01-29 18:52:57 URL=[https://www.genie.co.kr/myMusic/jGetMyAlbum.json], responce=[]
+2018-01-29 18:53:05 LocalPlayer::SetDevice Device List====
+# device = 1, Speakers (Realtek High Definition Audio)
+# device = 1 seleted default
+# ====
+2018-01-29 18:53:06 LocalPlayer::SetDevice Init device 1 initialized
+2018-01-29 18:53:11 LocalPlayer::Start ChannelPlay success
+2018-01-29 18:53:20 LocalPlayer::Start ChannelPlay success
+2018-01-29 18:53:48 URL=[https://www.genie.co.kr/pcplayer/player/jPlayerSongList.json], error=A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2018-01-29 18:53:49 URL=[https://www.genie.co.kr/pcplayer/player/jPlayerSongList.json], responce=200
+2018-01-29 18:56:53 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:00:26 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:04:02 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:05:25 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:06:29 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:07:32 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:08:38 LocalPlayer::Start ChannelPlay success
+2018-01-29 19:09:50 LocalPlayer::Start ChannelPlay success
+# geniemusic started ================>
+2018-01-30 13:10:42 OS : 10.0, APP : 0.9.1.4
+2018-01-30 13:10:44 upgrade temp removed
+2018-01-30 13:10:57 URL=[https://www.genie.co.kr/pcplayer/auth/j_Member_Login.json], error=A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2018-01-30 13:10:58 URL=[https://www.genie.co.kr/pcplayer/auth/j_Member_Login.json], responce=200
+# geniemusic started ================>
+2018-01-30 19:34:27 OS : 10.0, APP : 0.9.1.4
+2018-01-30 19:34:30 upgrade temp removed
+# geniemusic started ================>
+2018-02-01 08:34:00 OS : 10.0, APP : 0.9.1.4
+2018-02-01 08:34:02 upgrade temp removed

@@ -1,0 +1,15 @@
+Logging in build 2018.0.0.685 started at: Thu Feb 15 09:07:15 2018
+========================================
+[00:00:10.672] 09:07:27.161 | Error - IMS : IMSLib not loaded
+[00:00:14.891] 09:07:31.386 | Doing recovery for null minisave fileA:xkhhY4KSnR7vUeOhzy-qzg fileB:PmYGs8U96DufgoeADz8IwQ
+[00:00:14.891] 09:07:31.386 | Trying to recover unnamed file
+[00:00:15.219] 09:07:31.703 | deleteHiddenBreakpointsOnMasters deleted 1 hidden breakpoints on masters
+[00:00:15.219] 09:07:31.705 | Recovered file:Website-1 path:null highest UID:109 filesize:unknown mod date:unknown
+[00:00:16.110] 09:07:32.600 | quitWithUI:Quitting Application. Called by: 
+[00:00:17.516] 09:07:34.010 | Recovery Complete
+[00:00:17.938] 09:07:34.423 | Quitting Application after 0.2 minutes. Called by: MuseApp/quitAfterProcessesComplete+closeOne+onCloseComplete+EventDispatcher/dispatchEventFunction+EventDispatcher/dispatchEvent
+[00:00:20.032] Logging shutdown normally
+
+==========
+Logging ended at: Thu Feb 15 09:07:36 2018
+

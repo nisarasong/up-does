@@ -1,0 +1,4 @@
+file.reference.does-public=public
+files.encoding=UTF-8
+site.root.folder=${file.reference.does-public}
+source.folder=
